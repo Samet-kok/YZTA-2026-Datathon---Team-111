@@ -7,13 +7,13 @@ Bu çalışma, bireylerin çeşitli biyolojik ve çevresel faktörlere dayalı b
 
 ## Model Mimarileri
 
-### 1. V21 Pipeline (Championship Pipeline)
+### 1. V21 Pipeline
 Bu yaklaşım, model çeşitliliğini artırmak ve tahmin kararlılığını sağlamak amacıyla tasarlanmıştır.
 - **Modeller:** LightGBM (L2 ve Huber Loss), XGBoost, CatBoost, HistGradientBoosting ve Derin Sinir Ağları (ANN).
 - **Meta-Learner:** Tüm temel modellerin tahminleri, `BayesianRidge` meta-modeli aracılığıyla birleştirilmiştir.
 - **Yöntemler:** Veri setindeki gürültüyü azaltmak amacıyla %30 ağırlıklı **Pseudo Labeling** tekniği uygulanmıştır.
 
-### 2. V27 Pipeline (Grandmaster Pipeline)
+### 2. V27 Pipeline
 Bu yaklaşım, CatBoost algoritmasının gücüne ve matematiksel optimizasyon tekniklerine odaklanmaktadır.
 - **Modeller:** Üç farklı mutasyona (Conservative, Aggressive, Diverse) sahip CatBoost modelleri ve **RankGauss** (Quantile Transformation) uygulanmış bir Sinir Ağı.
 - **Optimizasyon:** Tahminlerin ağırlıklandırılması, Out-of-Fold (OOF) skorları üzerinden **SLSQP (Sequential Least Squares Programming)** Simplex optimizasyonu ile gerçekleştirilmiştir.
