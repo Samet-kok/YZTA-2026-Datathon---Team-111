@@ -1,0 +1,8 @@
+# Data files
+train.csv
+test_x.csv
+sample_submission.csv
+catboost_info/
+.venv/
+__pycache__/
+*.pyc
